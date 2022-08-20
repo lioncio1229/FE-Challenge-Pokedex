@@ -3,11 +3,10 @@ export default function rootReducer(state, action)
 {
     switch(action.type)
     {
-        case 'doneFetching':
+        case 'loadPokemons':
             return {
                 ...state,
                 pokemons : action.payload,
-                isLoaded : true,
             }
         default:
             return state;

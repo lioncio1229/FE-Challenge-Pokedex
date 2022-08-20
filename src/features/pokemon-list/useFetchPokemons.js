@@ -7,13 +7,13 @@ export default function useFetchPokemons(url)
 
     useEffect(() => {
         const fetchData = async() => {
-            await fetch(url).then(res => (res.json())).then(output => {
-                dispatch({type : 'doneFetching', payload : output})
+            await fetch(url).then(res => (res.json())).then(obj => {
+                dispatch({type : 'loadPokemons', payload : obj.results})
             });
         }
 
-        if(!state.isLoaded)  fetchData();
-    }, [state.isLoaded]);
+        if(!state.pokemons)  fetchData();
+    }, [url]);
 
     return state.pokemons;
 }

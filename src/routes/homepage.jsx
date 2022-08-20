@@ -1,15 +1,11 @@
-import Provider from "../provider/provider";
-import Header from "../features/header/header";
-import Pokemons from "../features/pokemons/pokemo";
+import Header from "../features/header";
+import Pokemons from "../features/pokemon-list";
 
-export default function Homepage()
-{
-    return(
-        <>
-            <Provider>
-                <Header />
-                <Pokemons />
-            </Provider>
-        </>
-    )
+export default function Homepage() {
+  return (
+    <>
+      <Header />
+      <Pokemons />
+    </>
+  );
 }
