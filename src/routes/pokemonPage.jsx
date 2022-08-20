@@ -9,7 +9,6 @@ export default function PokemonPage() {
   const pokemon = useFetchPokemonInfo(
     `https://pokeapi.co/api/v2/pokemon/${params.pokemon_name}/`
   );
-  console.log(pokemon);
 
   return (
     <>

@@ -1,3 +1,4 @@
+
 export default function BasicInfo({
   name = "No Name",
   types = [],
